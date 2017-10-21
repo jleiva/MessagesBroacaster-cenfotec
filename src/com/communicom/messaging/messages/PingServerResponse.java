@@ -3,12 +3,14 @@ package com.communicom.messaging.messages;
 import java.time.LocalDateTime;
 
 public class PingServerResponse {
+	private String messageName;
 	private int messageNumber;
 	private String sourceAddress;
 	private String targetAddress;
 	private LocalDateTime emisionTime;
 	
 	public PingServerResponse(){
+		this.messageName = "PingServerResponse";
 		this.messageNumber = 2;
 		this.emisionTime = LocalDateTime.now();
 	}
@@ -31,4 +33,9 @@ public class PingServerResponse {
 	public int getMessageNumber() {
 		return messageNumber;
 	}
+
+	public String getMessageName() {
+		return messageName;
+	}
+	
 }

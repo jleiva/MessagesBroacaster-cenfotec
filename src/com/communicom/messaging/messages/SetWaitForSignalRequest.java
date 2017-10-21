@@ -5,6 +5,7 @@ import java.time.LocalDateTime;
 import com.communicom.messaging.messages.signals.SignalType;
 
 public class SetWaitForSignalRequest {
+	private String messageName;
 	private int messageNumber;
 	private String sourceAddress;
 	private String targetAddress;
@@ -13,6 +14,7 @@ public class SetWaitForSignalRequest {
 	private String signalValue;
 	
 	public SetWaitForSignalRequest(){
+		this.messageName = "SetWaitForSignalRequest";
 		this.messageNumber = 3;
 		this.emisionTime = LocalDateTime.now();
 	}
@@ -51,6 +53,10 @@ public class SetWaitForSignalRequest {
 
 	public void setSignalValue(String signalValue) {
 		this.signalValue = signalValue;
+	}
+
+	public String getMessageName() {
+		return messageName;
 	}
 	
 }
