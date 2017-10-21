@@ -1,9 +1,9 @@
 package com.communicomm.messaging.simulator;
 
 import java.io.BufferedReader;
-import java.io.IOException;
 import java.io.InputStreamReader;
 
+import com.communicom.messaging.messages.signals.MessageType;
 import com.communicomm.messaging.messages.controller.MessageController;
 
 public class MessagingSimulator {
@@ -40,10 +40,10 @@ public class MessagingSimulator {
 	private static void processOption(int option) throws Exception  {
 		int messageOption = askForOptions();
 		if (option == 1){
-			messageController.sendMessage(messageOption);	
+			messageController.sendMessage(MessageType.values()[messageOption - 1]);
 		}
 		if (option == 2){
-			messageController.listMessage(messageOption);	
+			messageController.listMessage();	
 		}
 		
 	}

@@ -36,4 +36,9 @@ public class Message {
 	public void setTargetAddress(String targetAddress) {
 		this.targetAddress = targetAddress;
 	}
+	
+	@Override
+	public String toString(){
+		return "Nombre: " + this.messageName + " Numero: " + this.messageNumber + " Timestamp " + this.emisionTime;
+	}
 }
